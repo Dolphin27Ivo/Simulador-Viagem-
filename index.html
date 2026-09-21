@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Simule sua viagem particular</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;padding:0}body{font-family:Arial,Helvetica,sans-serif;background:#f3f6fa;color:#17212b}.page{width:100%;max-width:760px;margin:auto;padding:10px}.card{background:#fff;border-radius:18px;padding:20px;box-shadow:0 5px 22px rgba(0,0,0,.1)}h1{font-size:clamp(28px,7vw,40px);line-height:1.08;margin:0 0 10px}.subtitle{font-size:16px;line-height:1.45;color:#5f6b76;margin:0 0 18px}.field{margin-top:15px}.field label,.field-title{display:block;font-weight:700;font-size:16px;margin-bottom:7px}select,input{display:block;width:100%;height:50px;padding:10px 12px;border:1px solid #aeb8c2;border-radius:10px;background:#fff;color:#17212b;font-size:16px}select{appearance:auto;-webkit-appearance:menulist}.choices{display:grid;grid-template-columns:1fr 1fr;gap:10px}.choices label{display:flex;align-items:center;gap:8px;min-height:50px;padding:10px 12px;border:1px solid #aeb8c2;border-radius:10px;font-weight:600;margin:0}.choices input{width:20px;height:20px;padding:0;margin:0}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.note{margin:8px 0 0;padding:10px 12px;border-radius:9px;background:#f1f5f9;color:#5f6b76;font-size:13px;line-height:1.4}.button{display:block;width:100%;height:52px;border:0;border-radius:10px;margin-top:20px;padding:10px 14px;font-size:16px;font-weight:800;cursor:pointer}.primary{background:#0b5ed7;color:#fff}.whatsapp{background:#20b85a;color:#fff}.result{display:none;margin-top:18px;padding:18px;border-radius:14px;background:#eef6ff;border:1px solid #cfe3fb}.result.visible{display:block}.result-title{font-weight:800}.price{font-size:34px;font-weight:900;margin:6px 0 12px}.details{font-size:14px;line-height:1.55}.row{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px solid rgba(0,0,0,.08)}.row span:last-child{text-align:right;font-weight:700}.footer{margin-top:16px;font-size:12px;color:#687580;line-height:1.45}.hidden{display:none!important}@media(max-width:600px){.page{padding:8px}.card{padding:16px;border-radius:14px}h1{font-size:30px}.subtitle{font-size:15px}.grid-2,.choices{grid-template-columns:1fr}.field{margin-top:13px}}
+</style>
+</head>
+<body>
+<main class="page"><section class="card">
+<h1>🚗 Simule sua viagem particular</h1>
+<p class="subtitle">Informe os dados abaixo para consultar uma estimativa.</p>
+<div class="field"><label for="destino">📍 Destino</label>
+<select id="destino">
+<option value="Massarandupió" data-price="130">Massarandupió</option><option value="Porto de Sauípe" data-price="150">Porto de Sauípe</option><option value="Imbassaí" data-price="150">Imbassaí</option><option value="Diogo" data-price="160">Diogo</option><option value="Santo Antônio" data-price="160">Santo Antônio</option><option value="Costa do Sauípe" data-price="160">Costa do Sauípe</option><option value="Praia do Forte" data-price="160">Praia do Forte</option><option value="Guarajuba" data-price="175">Guarajuba</option><option value="Barra de Jacuípe" data-price="190">Barra de Jacuípe</option><option value="Arembepe" data-price="205">Arembepe</option><option value="Jauá" data-price="220">Jauá</option><option value="Abrantes" data-price="235">Abrantes</option><option value="Conde" data-price="235">Conde</option><option value="Entre Rios" data-price="240">Entre Rios</option><option value="Esplanada" data-price="240">Esplanada</option><option value="Catu" data-price="240">Catu</option><option value="Mata de São João" data-price="250">Mata de São João</option><option value="Pojuca" data-price="250">Pojuca</option><option value="Alagoinhas" data-price="265">Alagoinhas</option><option value="Camaçari" data-price="300">Camaçari</option><option value="Lauro de Freitas" data-price="305">Lauro de Freitas</option><option value="Simões Filho" data-price="315">Simões Filho</option><option value="Salvador" data-price="365">Salvador</option><option value="Aracaju/SE" data-price="450">Aracaju/SE</option>
+</select></div>
+<div class="field"><div class="field-title">🚘 Tipo de viagem</div><div class="choices"><label><input type="radio" name="tipo" value="volta" checked> Ida e volta</label><label><input type="radio" name="tipo" value="ida"> Somente ida</label></div></div>
+<div class="field" id="esperaField"><label for="espera">⏰ Tempo de espera no destino</label><select id="espera"><option value="1">Até 1 hora — incluída</option><option value="2">2 horas — + R$ 15,00</option><option value="3">3 horas — + R$ 30,00</option><option value="4">4 horas — + R$ 45,00</option><option value="5">5 horas — + R$ 60,00</option><option value="6">6 horas — + R$ 75,00</option><option value="7">7 horas — + R$ 90,00</option><option value="8">8 horas — + R$ 105,00</option><option value="consultar">Mais de 8 horas — consultar</option></select><p class="note">A primeira hora está incluída. Cada hora adicional acrescenta R$ 15,00.</p></div>
+<div class="grid-2"><div class="field"><label for="passageiros">👥 Passageiros</label><select id="passageiros"><option value="1">1 passageiro</option><option value="2">2 passageiros</option><option value="3">3 passageiros</option><option value="4">4 passageiros</option></select></div><div class="field"><label for="crianca">👶 Haverá criança ou bebê?</label><select id="crianca"><option value="nao">Não</option><option value="sim">Sim</option></select></div></div>
+<div id="childBox" class="field hidden"><label for="idade">Idade aproximada</label><input id="idade" type="number" min="0" max="17" inputmode="numeric" placeholder="Ex.: 2"><p class="note">Cadeirinha/assento infantil: confirmar disponibilidade e valor pelo WhatsApp.</p></div>
+<div class="grid-2"><div class="field"><label for="data">📅 Data desejada</label><input id="data" type="date"></div><div class="field"><label for="hora">⏰ Horário desejado</label><select id="hora"><option value="08:00" selected>08:00</option><option value="06:00">06:00</option><option value="07:00">07:00</option><option value="09:00">09:00</option><option value="10:00">10:00</option><option value="11:00">11:00</option><option value="12:00">12:00</option><option value="13:00">13:00</option><option value="14:00">14:00</option><option value="15:00">15:00</option><option value="16:00">16:00</option><option value="17:00">17:00</option><option value="18:00">18:00</option><option value="19:00">19:00</option><option value="20:00">20:00</option></select></div></div>
+<button id="calcularBtn" class="button primary" type="button">CALCULAR VIAGEM</button>
+<section id="resultado" class="result"><div class="result-title">🧾 VALOR ESTIMADO</div><div id="preco" class="price">R$ 0,00</div><div id="detalhes" class="details"></div><p class="note">A disponibilidade, horário e valor final serão confirmados pelo WhatsApp.</p><button id="whatsappBtn" class="button whatsapp" type="button">📲 Solicitar pelo WhatsApp</button></section>
+<p class="footer">O valor é por veículo e atende até 4 passageiros. Pedágios e estacionamentos específicos podem ser acrescentados quando aplicáveis.</p>
+</section></main>
+<script>
+(function(){
+const $=id=>document.getElementById(id);
+function money(v){return Number(v).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});}
+function tipo(){return document.querySelector('input[name="tipo"]:checked').value;}
+function atualizar(){ $('esperaField').classList.toggle('hidden',tipo()==='ida'); }
+function child(){ $('childBox').classList.toggle('hidden',$('crianca').value!=='sim'); }
+function calcular(){
+ const opt=$('destino').options[$('destino').selectedIndex]; const base=Number(opt.dataset.price); const ida=tipo()==='ida'; const espera=$('espera').value;
+ let total=ida ? base/2+15 : base;
+ if(!ida && espera!=='consultar') total+=(Number(espera)-1)*15;
+ $('preco').textContent=espera==='consultar'&&!ida?'Consultar':money(total);
+ const data=$('data').value; const dataTexto=data?new Date(data+'T12:00:00').toLocaleDateString('pt-BR'):'Não informada';
+ $('detalhes').innerHTML='<div class="row"><span>Destino</span><span>'+opt.value+'</span></div><div class="row"><span>Tipo</span><span>'+(ida?'Somente ida':'Ida e volta')+'</span></div><div class="row"><span>Passageiros</span><span>'+$('passageiros').value+'</span></div><div class="row"><span>Espera</span><span>'+(ida?'Não se aplica':$('espera').selectedOptions[0].textContent)+'</span></div><div class="row"><span>Data</span><span>'+dataTexto+'</span></div><div class="row"><span>Horário</span><span>'+$('hora').value+'</span></div>'+( $('crianca').value==='sim'?'<div class="row"><span>Criança/bebê</span><span>Sim — idade '+($('idade').value||'não informada')+'</span></div>':'');
+ $('resultado').classList.add('visible');
+}
+$('calcularBtn').addEventListener('click',calcular); $('whatsappBtn').addEventListener('click',function(){calcular(); const msg='Olá! Fiz uma simulação de transporte particular.\n\nDestino: '+$('destino').value+'\nTipo: '+(tipo()==='ida'?'Somente ida':'Ida e volta')+'\nPassageiros: '+$('passageiros').value+'\nHorário: '+$('hora').value+'\nValor estimado: '+$('preco').textContent+'\n\nGostaria de confirmar a disponibilidade.'; window.location.href='https://wa.me/5571993247471?text='+encodeURIComponent(msg);});
+document.querySelectorAll('input[name="tipo"]').forEach(e=>e.addEventListener('change',atualizar)); $('crianca').addEventListener('change',child); atualizar(); child();
+})();
+</script>
+</body></html>
